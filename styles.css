@@ -1,0 +1,269 @@
+body {
+    margin: 0;
+    background-color: #D4E9E1;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    display: flex;
+    font-family: 'Literata', serif;
+    font-weight: 400;
+    font-size: large;
+    color: white;
+    align-items: center;
+    padding-left: 30px;
+    height: 44px;
+    background-color: #347F63;
+}
+
+.logo {
+    height: 2em;
+    background-color: #EFD18C;
+}
+
+header>a {
+    padding: 1rem;
+}
+
+.head-img {
+    height: 120px;
+    background-color: #C6E9DC;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+.container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+    font-family: "Jost", sans-serif;
+}
+
+.container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #347F63;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    left: 50%;
+}
+
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}
+
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+.right::after {
+    left: -16px;
+}
+
+.content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+}
+
+@media screen and (max-width: 600px) {
+
+    .timeline::after {
+        left: 31px;
+    }
+
+    .container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    .container::before {
+        left: 60px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+    }
+
+    .left::after,
+    .right::after {
+        left: 15px;
+    }
+
+    .right {
+        left: 0%;
+    }
+}
+
+.grid {
+    margin: 30px 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 200px);
+    row-gap: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 200px);
+    }
+
+    .item-5 {
+        display: none;
+    }
+
+    .item-6 {
+        display: none;
+    }
+
+}
+
+
+.item-1 {
+    /* background-color: #3C3882; */
+    background: url('https://c4.wallpaperflare.com/wallpaper/77/41/102/wildlife-landscape-illustration-wallpaper-preview.jpg') center/cover;
+}
+
+.item-2 {
+    background-color: #94A645;
+    background: url("https://img.freepik.com/free-vector/nature-scene-with-river-hills-forest-mountain-landscape-flat-cartoon-style-illustration_1150-37326.jpg") center/cover;
+}
+
+.item-3 {
+    background-color: #AB6647;
+    background: url("https://img.freepik.com/premium-vector/panoramic-view-mountain-landscape_103688-1789.jpg") center/cover;
+}
+
+.item-4 {
+    background-color: #3C3882;
+    background: url("https://media.istockphoto.com/id/1418084866/vector/mountain-landscape-and-pine-forest-in-the-morning-and-evening-nature-vector-background-image.jpg?b=1&s=170667a&w=0&k=20&c=uwz4Fb3V4u3fUaNuUPIdasHdBgl2BN_1qUUkdOGpg6o=") center/cover;
+}
+
+.item-5 {
+    background-color: #94A645;
+    background: url("https://cdn.pixabay.com/photo/2020/05/30/21/30/illustration-5240508_1280.jpg") center/cover;
+}
+
+.item-6 {
+    background-color: #AB6647;
+    background: url("https://c4.wallpaperflare.com/wallpaper/966/328/969/lake-mountains-reflection-minimalism-wallpaper-preview.jpg") center/cover;
+
+}
+
+.textblock {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    font-family: "Jost", sans-serif;
+    font-weight: 400;
+    margin: 30px;
+    padding: 10px 20px;
+}
+
+.text-area {
+    width: 48%;
+    /* position: relative; */
+
+}
+
+@media screen and (max-width: 600px) {
+    .text-line {
+        display: none;
+    }
+
+    .textblock {
+        flex-direction: column;
+    }
+
+    .text-area {
+        width: 96%;
+    }
+}
+
+.text-line {
+    content: "";
+    width: 2px;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.24);
+    left: 100%;
+    z-index: 100;
+}
+
+.menu-icon {
+    height: 44px;
+    width: 44px;
+
+
+
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    background-color: #93BDAD;
+}
+
+.footer-bar {
+    font-family: 'Jost', sans-serif;
+    font-size: small;
+
+}
+
+.footer-bar span {
+    text-decoration-line: underline;
+    padding: 0px 15px 0px 0px;
+}
