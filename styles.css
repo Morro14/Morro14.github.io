@@ -4,6 +4,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+
 header {
     display: flex;
     font-family: 'Literata', serif;
@@ -16,18 +17,31 @@ header {
     background-color: #347F63;
 }
 
-.logo {
-    height: 2em;
-    background-color: #EFD18C;
+header>a {
+    padding: 0 10px 0 10px;
+    background-size: 100px 100px;
 }
 
-header>a {
-    padding: 1rem;
+header>a:visited {
+    color: white;
 }
+
+header>a:hover {
+    background-color: white;
+    color: black;
+    background-size: 100px 100px;
+
+}
+
+header>a:link {
+    text-decoration: none;
+}
+
 
 .head-img {
     height: 120px;
-    background-color: #C6E9DC;
+    background-image: url('https://i.imgur.com/LFtrPpj.jpeg');
+    background-position: center;
 }
 
 * {
