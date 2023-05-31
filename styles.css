@@ -27,7 +27,7 @@ header>a:visited {
 }
 
 header>a:hover {
-    background-color: white;
+    background-color: #6ABF9F;
     color: black;
     background-size: 100px 100px;
 
@@ -40,7 +40,7 @@ header>a:link {
 
 .head-img {
     height: 120px;
-    background-image: url('https://i.imgur.com/LFtrPpj.jpeg');
+    background-image: url('https://w0.peakpx.com/wallpaper/2/707/HD-wallpaper-geometric-landscape-geometric-landscape-art.jpg');
     background-position: center;
 }
 
@@ -268,6 +268,7 @@ header>a:link {
     display: flex;
     justify-content: center;
     height: 50px;
+
     background-color: #93BDAD;
 }
 
@@ -277,7 +278,12 @@ header>a:link {
 
 }
 
-.footer-bar span {
+.footer-bar a {
     text-decoration-line: underline;
     padding: 0px 15px 0px 0px;
+    font-family: 'Literata', serif;
+}
+
+.footer-bar a:hover {
+    color: rgb(80, 80, 80);
 }
